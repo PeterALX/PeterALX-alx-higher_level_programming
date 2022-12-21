@@ -8,9 +8,9 @@ class Square:
         __size (int): Describes the length of a square
     """
     def __init__(self, size):
-        """Initializes the square attributes
+        """Init the square attributes
         Args:
-            size (int): Describes the length of a square
+            size (int): the length of the square
         Returns:
             None
         """
