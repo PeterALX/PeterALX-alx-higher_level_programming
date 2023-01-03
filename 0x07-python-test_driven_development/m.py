@@ -8,7 +8,7 @@ print()
 
 #add_integer
 print(r"##add integer")
-a = add(6,10)
+a = add(3.35,4.5)
 print(a)
 print()
 
