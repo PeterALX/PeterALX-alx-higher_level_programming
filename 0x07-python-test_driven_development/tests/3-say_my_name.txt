@@ -1,0 +1,13 @@
+
+# The ``3-say_my_name`` module
+============================================
+How to use 3-say_my_name.py
+============================================
+
+This library has one function called ``say_my_name``
+
+``say_my_name`` returns a new matrix after a given matrix has been
+divided by a number ``div``:
+
+Importing the function matrix_divided.
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
