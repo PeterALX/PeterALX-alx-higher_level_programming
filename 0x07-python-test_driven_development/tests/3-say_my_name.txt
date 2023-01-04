@@ -6,8 +6,46 @@ How to use 3-say_my_name.py
 
 This library has one function called ``say_my_name``
 
-``say_my_name`` returns a new matrix after a given matrix has been
-divided by a number ``div``:
+``say_my_name`` prints My name is <first name> <last name>: 
 
-Importing the function matrix_divided.
-    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+Importing the function say_my_name.
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Both inputs being strings.
+	>>> say_my_name("Peter", "Kioko")
+	My name is Peter Kioko
+
+Only first name passed.
+	>>> say_my_name("Peter")
+	My name is Peter 
+
+no arguments passed.
+	>>> say_my_name()
+	Traceback (most recent call last):
+		...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Both args not strings.
+	>>> say_my_name([1,2,3],3)
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+first arg not a string.
+	>>> say_my_name(("hello","there") , "Kioko")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+second arg not a string.
+	>>> say_my_name("Peter" ,3)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+more than two args.
+	>>> say_my_name("Peter" ,"Kioko", "Mutas") #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+		...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but ...
+

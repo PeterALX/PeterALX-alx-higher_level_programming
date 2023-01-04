@@ -22,7 +22,7 @@ print()
 
 #say_my_name
 print("##say_my_name")
-say_name("Peter", "Kioko")
+say_name("Pte","","")
 print()
 
 #print_square
