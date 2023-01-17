@@ -21,7 +21,7 @@ class Rectangle(Base):
             y (int, optional): y. Defaults to 0.
             id (int, optional): Identity number of rectangle. Defaults to None.
         """
-        super.__init__(id)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
