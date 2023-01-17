@@ -3,7 +3,10 @@
 """ class base"""
 
 class Base:
-    """ class base."""
+    """Class that defines properties of Base.
+     Attributes:
+        id (int): Identity of each instance.
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
