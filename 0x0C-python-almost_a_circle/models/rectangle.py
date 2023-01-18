@@ -100,19 +100,19 @@ class Rectangle(Base):
         for i in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
-    def update(self, *args):
-        """ updates the properties of rectangle instance """
-        # list_atrr = ["id", "width", "height", "x", "y"]
-        # for i in range(len(args)):
-        #     setattr(self, list_atrr[i], args[i])
-        if len(args) >= 1:
-            self.id = args[0]
-        if len(args) >= 2:
-            self.__width = args[1]
-        if len(args) >= 3:
-            self.__height = args[2]
-        if len(args) >= 4:
-            self.__x = args[3]
-        if len(args) >= 5:
-            self.__y = args[4]
+    def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute
+           Args:
+          *args (tuple): arguments.
+           **kwargs (dict): double pointer to a dictionary.
+        """
 
+        # print("args {}".format(type(args)))
+        # print("kwargs {}".format(type(kwargs)))
+        if args is not None and len(args) != 0:
+            list_atrr = ["id", "width", "height", "x", "y"]
+            for i in range(len(args)):
+                setattr(self, list_atrr[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
