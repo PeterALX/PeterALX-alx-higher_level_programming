@@ -89,3 +89,8 @@ class Rectangle(Base):
     def area(self):
         """returns the area of the rectangle instance"""
         return self.__width * self.__height
+
+    def display(self):
+        """draw the rectangle instance with '#' character"""
+        for i in range(self.__height):
+            print("#" * self.__width)
