@@ -1,18 +1,21 @@
 #!/usr/bin/python3
 
-# The copy() method returns a shallow copy of the list
-# The copy() method returns a new list. It doesn't modify the original list.
-# Syntax: new_list = list.copy()
 def new_in_list(my_list, idx, element):
-    i = 0
-    a = my_list.copy()
-    while(i < len(a)):
-        if idx < 0 or idx >= len(a):
-            return(my_list)
-        elif i == idx:
-            a[i] = element
-            return(a)
-        i += 1
+    """function that replaces an element in list w/o modifying the list
 
-# A function that replaces an element in a list at a specific position
-# without modifying the original list (like in C)
+    If idx is negative, return a copy of the original list
+    If idx is out of range (> of number of element in my_list),
+    return a copy of the original list
+    You are not allowed to import any module
+    You are not allowed to use try/except
+    """
+
+    if my_list:
+        if idx < 0:
+            return my_list
+        elif idx > len(my_list) - 1:
+            return my_list
+        else:
+            new_list = my_list[:]
+            new_list[idx] = element
+            return new_list

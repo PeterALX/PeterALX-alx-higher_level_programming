@@ -1,17 +1,20 @@
 #!/usr/bin/python3
 
-# To find the largest number in a list in Python:
-# 1. Set the first element as the largest number candidate.
-# 2. Loop through the list of numbers.
-# 3. Update the largest number candidate if a number is greater than it.
 def max_integer(my_list=[]):
-    if len(my_list) == 0:
-        max_ = None
-    if len(my_list) > 0:
-        max_ = my_list[0]
-        for value in my_list:
-            if(value > max_):
-                max_ = value
-    return(max_)
+    """function that returns biggest integer in list
 
-# A function that finds the biggest integer of a list
+    If the list is empty, return None
+    You can assume that the list only contains integers
+    You are not allowed to import any module
+    You are not allowed to use the builtin max()
+    """
+
+    list_length = len(my_list)
+
+    if list_length == 0:
+        return
+
+    # sort the list in ascending order
+    my_list.sort()
+
+    return my_list[-1]

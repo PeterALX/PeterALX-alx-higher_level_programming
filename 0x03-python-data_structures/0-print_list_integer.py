@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 
-# The output will be printed in separate lines because \n has been
-# added to the end of each line
 def print_list_integer(my_list=[]):
-    for value in my_list:
-        print("{:d}".format(value), end="\n")
+    """print integers function
 
-# A function that prints all integers of a list
+    One integer per line
+    Don't import any module or cast integers to strings
+    Assume the list only contains integers
+    Use str.format() to print
+    """
+    if my_list:
+        for integer in my_list:
+            print("{:d}".format(integer))

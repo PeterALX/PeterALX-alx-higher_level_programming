@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 
-# The del operator removes the item or an element at the specified
-# index location from the list, but the removed item is not
-# returned, as it is with the pop() method.
 def delete_at(my_list=[], idx=0):
-    if my_list:
-        if 0 <= idx < len(my_list):
-            del my_list[idx]
-    return my_list
+    """function that deletes item at specific position in a list
 
-# A function that deletes the item at a specific position in a list
+    If idx is negative or out of range return the same list
+    You are not allowed to use pop()
+    You are not allowed to import any module
+    """
+    if idx < 0 or idx > len(my_list) - 1:
+        return my_list
+
+    del my_list[idx]
+
+    return my_list

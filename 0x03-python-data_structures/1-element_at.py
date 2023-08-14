@@ -1,12 +1,17 @@
 #!/usr/bin/python3
 
-# When a return statement is used in a function body, the execution
-# of the function is stopped. If specified, a given value is
-# returned to the function caller.
 def element_at(my_list, idx):
-    if idx < 0 or idx >= len(my_list):
-        return
-    else:
-        return(my_list[idx])
+    """retrieve element function
 
-# A function that retrieves an element from a list like in C
+    If idx is negative, the function should return None
+    If idx is out of range (> of number of element in my_list), return None
+    You are not allowed to import any module
+    You are not allowed to use try/except
+    """
+    if my_list:
+        if idx < 0:
+            return
+        elif idx > len(my_list) - 1:
+            return
+        else:
+            return my_list[idx]

@@ -1,12 +1,20 @@
 #!/usr/bin/python3
 
-# my_list[::1] would return the entire list from beginning to end.
-# If we, instead, stepped using a value of -1, then we would
-# traverse the list from the last item to the first.
 def print_reversed_list_integer(my_list=[]):
-    if my_list:
-        a = my_list[::-1]
-        for value in a:
-            print("{:d}".format(value), end="\n")
+    """function that prints list in reverse
 
-# A function that prints all integers of a list, in reverse order
+    One integer per line
+    You are not allowed to import any module
+    You can assume that the list only contains integers
+    You are not allowed to cast integers into strings
+    You have to use str.format() to print integers
+    """
+
+    if my_list:
+
+        # point i to the last element
+        i = len(my_list) - 1
+
+        while i >= 0:
+            print("{:d}".format(my_list[i]))
+            i -= 1

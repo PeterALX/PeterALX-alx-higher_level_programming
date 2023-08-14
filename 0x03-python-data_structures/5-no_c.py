@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 
-# Append character to string through using + operator to
-# concatenate a string and a character and return a new string.
 def no_c(my_string):
-    # initialization of string to ""
-    replacement = ""
-    # traverse in the string
-    for value in my_string:
-        if value != 'c' and value != 'C':
-            replacement += value
-    return(replacement)
+    """function that removes all characters c and C from string
 
-# A function that removes all characters c and C from a string
+    The function should return the new string
+    You are not allowed to import any module
+    You are not allowed to use str.replace()
+    """
+    list_1 = ['c', 'C']
+
+    new_str = my_string[:]
+    new_str = "".join(i for i in my_string if i not in list_1)
+
+    return new_str
