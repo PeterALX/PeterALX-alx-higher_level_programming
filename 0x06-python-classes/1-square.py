@@ -1,17 +1,18 @@
 #!/usr/bin/python3
-"""A class Square that defines a square"""
+"""Defines a class Square"""
 
 
 class Square:
-    """Module of a square
+    """
+    Class that defines properties of square by: (based on 0-square.py).
+
     Attributes:
-        __size (int): Describes the length of a square
+        size: size of a square (1 side).
     """
     def __init__(self, size):
-        """Init the square attributes
+        """Creates new instances of square (1 side).
+
         Args:
-            size (int): the length of the square
-        Returns:
-            None
+            size: size of the square.
         """
         self.__size = size
