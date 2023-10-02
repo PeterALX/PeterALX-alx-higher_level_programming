@@ -1,4 +1,2 @@
 #!/bin/bash
-
-# To run a python code the python3 -c command is used.
 python3 -c "$PYCODE"
