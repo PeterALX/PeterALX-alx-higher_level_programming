@@ -10,4 +10,4 @@ def print_list_integer(my_list=[]):
     """
     if my_list:
         for integer in my_list:
-            print(f"{integer}")
+            print("{:d}".format(integer))
