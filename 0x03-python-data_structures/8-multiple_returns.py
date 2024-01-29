@@ -1,12 +1,6 @@
 #!/usr/bin/python3
 
 def multiple_returns(sentence):
-    """function that returns tuple with the length of a str and its first,
-    character
-
-    If the sentence is empty, the first character should be equal to None
-    You are not allowed to import any module
-    """
 
     sentence_length = len(sentence)
 
