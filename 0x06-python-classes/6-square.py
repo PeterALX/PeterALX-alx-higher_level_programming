@@ -40,7 +40,5 @@ class Square:
         if self.size == 0:
             print()
         else:
-            print((' ' * self.position[0] + '#' * self.size + '\n') * self.size, end=(''))
-
-s = Square(10, (10,10))
-s.my_print()
+            print((' ' * self.position[0] + '#' *
+                  self.size + '\n') * self.size, end=(''))
