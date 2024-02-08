@@ -4,4 +4,6 @@
 
 class Square:
     """An empty square class"""
-    pass
+
+    def __init__(self, size):
+        self.size = size
