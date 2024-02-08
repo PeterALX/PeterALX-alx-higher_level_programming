@@ -41,13 +41,12 @@ class SinglyLinkedList:
 
     def __str__(self):
         string = ''
-        if self.__head:
-            node = self.__head
-            while node:
-                string = f'{string}{node.data}'
-                if node.next_node:
-                    string = f'{string}\n'
-                node = node.next_node
+        node = self.__head
+        while node:
+            string = f'{string}{node.data}'
+            if node.next_node:
+                string = f'{string}\n'
+            node = node.next_node
         return string
 
     def sorted_insert(self, value):
