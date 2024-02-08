@@ -47,8 +47,11 @@ class Square:
 
     def __str__(self):
         if self.size == 0:
-            return '\n'
+            return ''
         else:
-            return ('\n' * self.position[1] +
-                    (' ' * self.position[0] + '#' *
-                     self.size + '\n') * self.size)
+            string = '\n' * self.position[1]
+            for i in range(0, self.size):
+                string = string + ' ' * self.position[0] + '#' * self.size
+                if i < self.size - 1:
+                    string = string + '\n'
+            return string
