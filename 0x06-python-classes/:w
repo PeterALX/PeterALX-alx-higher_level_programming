@@ -53,10 +53,10 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         if not self.__head:
             self.__head = Node(value)
-        elif self.__head.data >= value:
+        elif self.__head >= value:
             tmp = self.__head
             self.__head = Node(value)
-            self.__head.next_node = tmp
+            self.__head = Node
         else:
             node = self.__head
             while node.next_node and value > node.next_node.data:
