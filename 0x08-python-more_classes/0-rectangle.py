@@ -4,4 +4,5 @@
 
 
 class Rectangle:
+    """this be a rectangle"""
     pass
