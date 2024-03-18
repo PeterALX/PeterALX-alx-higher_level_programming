@@ -64,31 +64,11 @@ def matrix_mul(m_a, m_b):
     # Loop through each row of the first matrix m_a using range(len_a) where
     # len_a is the number of rows in m_a.
     for elm in range(len_a):
-        # For each row in m_a, initialize an empty list called x to store the
-        # resulting row of the product matrix.
         x = []
-        # Loop through each element of the current row of m_a using
-        # range(len_elm) where len_elm is the number of elements in
-        # the current row.
         for i in range(len_elm):
-            # For each element in the current row of m_a, initialize
-            # a variable y to store the current sum.
             y = 0
-            # Loop through each column of the second matrix m_b using
-            # range(len_b) where len_b is the number of columns in m_b.
             for j in range(len_b):
-                # For each column in m_b, multiply the current element
-                # of the current row of m_a with the current element of
-                # the current column of m_b, and add the result to y.
                 y += m_a[elm][j] * m_b[j][i]
-            # After iterating through all columns of m_b, append y to
-            # the list x.
             x.append(y)
-        # After iterating through all elements of the current row of m_a,
-        # append the resulting row x to the list result.
         result.append(x)
-    # After iterating through all rows of m_a, return the resulting matrix
-    # result.
-    return(result)
-
-# A function that multiplies 2 matrices.
+    return (result)
