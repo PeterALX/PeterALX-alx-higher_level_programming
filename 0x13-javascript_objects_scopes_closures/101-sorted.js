@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
-dict = require('./dict.js').dict;
-d = {};
+const dict = require('./dict.js').dict;
+const d = {};
 for (const [k, v] of Object.entries(dict)) {
   if (d[v] === undefined) {
-    d[v] = [k];
-  } else d[v].push(k);
+    d[v] = [];
+  }
+  d[v].push(k);
 }
 console.log(d);
