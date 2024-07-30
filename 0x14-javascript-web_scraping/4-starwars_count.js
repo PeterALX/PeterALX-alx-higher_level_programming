@@ -8,9 +8,11 @@ request(process.argv[2], (err, response, body) => {
     const films = JSON.parse(body).results;
     let count = 0;
     films.forEach((film) => {
-      if (film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
-        count++;
-      }
+      film.characters.forEach(c => {
+        if (c.includes('18')) {
+          count++;
+        }
+      });
     });
     console.log(count);
   }
