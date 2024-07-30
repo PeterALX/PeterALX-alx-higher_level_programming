@@ -1,24 +1,25 @@
 #!/usr/bin/node
-
 const request = require('request');
-let characters;
-const dictionary = {};
-request(`https://swapi-api.hbtn.io/api/films/${process.argv[2]}`, function (error, response, body) {
+request(`https://swapi-api.hbtn.io/api/films/${process.argv[2]}`, async function (error, response, body) {
   if (error) {
     console.log(error);
   }
   characters = JSON.parse(body).characters;
-  for (const url of characters) {
-    request(url, (error, response, body) =>
-      !error && addData(url, JSON.parse(body).name));
+  for (const character of characters) {
+    try {
+      const name = await promiserequest(character);
+      console.log(name);
+    } catch (error) {
+      console.log('promise rejected: ', error);
+    }
   }
 });
 
-function addData (url, name) {
-  dictionary[url] = name;
-  if (Object.entries(dictionary).length === characters.length) {
-    for (const url of characters) {
-      console.log(dictionary[url]);
-    }
-  }
+function promiserequest (url) {
+  return new Promise((resolve, reject) => {
+    request(url, (error, response, body) => {
+      if (error) reject('wee mafi nini');
+      else resolve(JSON.parse(body).name);
+    });
+  });
 }
